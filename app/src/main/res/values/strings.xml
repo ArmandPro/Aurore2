@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Aurore</string>
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">566176297108721</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb566176297108721</string>
+    <string name="facebook_app_id">566176297108721</string>
+    <!-- Twitter consumer key and secret -->
+    <string name="twitter_consumer_key" translatable="false">84jP5yu90wwSfgj9lAqrXipHI</string>
+    <string name="twitter_consumer_secret" translatable="false">bwq8vRGrpSGz5hoW1Wj22QdagTSIzAQ9Sk5emMTSKuKKLS1DBB</string>
 </resources>
