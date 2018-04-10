@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#44A08D</color>
+    <color name="colorPrimaryDark">#44A08D</color>
+    <color name="colorAccent">#093637</color>
+    <color name="textColor">#bdc3c7</color>
+    <color name="grad1">#093637</color>
+    <color name="grad2">#44A08D</color>
+    <color name="grad3">#38ef7d</color>
+    <color name="grad4">#E100FF</color>
+
+
 </resources>
