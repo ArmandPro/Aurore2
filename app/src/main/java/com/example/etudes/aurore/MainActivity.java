@@ -35,6 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        final Button weatherbtn = findViewById(R.id.weatherbtn);
+        weatherbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(),WeatherActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
+
         final Button logoutbtn = findViewById(R.id.logoutbtn);
         logoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override

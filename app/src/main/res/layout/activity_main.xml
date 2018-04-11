@@ -18,6 +18,14 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/weatherbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weather"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+            <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,4 +37,5 @@
                 android:text="Log Out" />
         </LinearLayout>
     </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
