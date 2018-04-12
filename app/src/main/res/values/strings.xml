@@ -8,4 +8,8 @@
     <string name="twitter_consumer_key" translatable="false">84jP5yu90wwSfgj9lAqrXipHI</string>
     <string name="twitter_consumer_secret" translatable="false">bwq8vRGrpSGz5hoW1Wj22QdagTSIzAQ9Sk5emMTSKuKKLS1DBB</string>
     <string name="title_activity_maps">Map</string>
+
+
+    <string name="title_activity_matrix_game">MatrixGame</string>
+    <string name="title_activity_roulette_game">RouletteGame</string>
 </resources>

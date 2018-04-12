@@ -4,44 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/aurore2"
     tools:context="com.example.etudes.aurore.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:foregroundGravity="bottom"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:gravity="bottom|end"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/weatherbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/perso_bttm"
                 android:text="Weather"
                 tools:layout_editor_absoluteX="148dp"
                 tools:layout_editor_absoluteY="131dp" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="?android:attr/listDivider" />
+
             <Button
                 android:id="@+id/mapbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/perso_bttm"
                 android:text="Map"
                 tools:layout_editor_absoluteX="148dp"
                 tools:layout_editor_absoluteY="131dp" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="?android:attr/listDivider" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/perso_bttm"
                 android:text="Prevision" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="?android:attr/listDivider" />
+
             <Button
                 android:id="@+id/logoutbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/perso_bttm"
                 android:text="Log Out" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/perso_bttm"
+                android:text="Mini Game" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/perso_bttm"
+                android:text="Notify me" />
+
+
         </LinearLayout>
     </ScrollView>
 

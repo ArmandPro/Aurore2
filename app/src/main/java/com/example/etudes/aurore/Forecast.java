@@ -37,12 +37,14 @@ public class Forecast extends AsyncTask<URL, Integer, List<String>> {
         return true;
     }
 
+
+
     public void print(){
-        for( int i = 0; i<4; i++)
+        for( int i = 0; i<3; i++)
         {
             for( int j = 0; j<8; j++)
             {
-                System.out.print(ForecastValue.FORECAST[i][j]);
+                System.out.print(ForecastValue.FORECAST[i][j]+"kp");
             }
             System.out.println();
         }
@@ -110,9 +112,9 @@ public class Forecast extends AsyncTask<URL, Integer, List<String>> {
         int j=17;
         while(j<25){
 
-            for(int k=0; k<4; k++){
+            for(int k=1; k<4; k++){
                 String[] parts = inputList.get(j).split("       ");
-                ForecastValue.FORECAST[k-0][j-17] = parts[k];
+                ForecastValue.FORECAST[k-1][j-17] = Integer.parseInt(parts[k].replaceAll("\\s+",""));
             }
 
             j++;

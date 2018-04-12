@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
 
 
@@ -23,6 +24,8 @@
             android:value="@string/facebook_app_id"
             tools:replace="android:value" />
 
+        <receiver android:name=".NotificationReceiver" />
+
         <activity android:name=".AuthenticationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +35,15 @@
         </activity>
         <activity android:name=".ForecastActivity" />
         <activity android:name=".WeatherActivity" />
+        <activity
+            android:name=".MiniGame.MatrixGame"
+            android:label="@string/title_activity_matrix_game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MiniGame.RouletteGame"
+            android:label="@string/title_activity_roulette_game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MiniGame.TapTaupeGame" />
         <activity android:name=".MainActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
