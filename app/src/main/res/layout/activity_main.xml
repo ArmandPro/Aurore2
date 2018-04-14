@@ -7,108 +7,132 @@
     android:background="@drawable/aurore2"
     tools:context="com.example.etudes.aurore.MainActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="bottom"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_height="wrap_content"
+        android:gravity="bottom|end"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:fontFamily="cursive"
+            android:text="Welcome to Aurore"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:paddingBottom="20px" />
+
+        <Button
+            android:id="@+id/weatherbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="bottom|end"
-            android:orientation="vertical">
+            android:layout_gravity="bottom"
+            android:background="@drawable/perso_bttm"
+            android:text="Weather"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="131dp" />
 
-            <Button
-                android:id="@+id/weatherbtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@drawable/perso_bttm"
-                android:text="Weather"
-                tools:layout_editor_absoluteX="148dp"
-                tools:layout_editor_absoluteY="131dp" />
+        <View
 
-            <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/listDivider" />
 
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_gravity="bottom"
-                android:background="?android:attr/listDivider" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/perso_bttm"
+            android:text="Prevision" />
 
-            <Button
-                android:id="@+id/mapbtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@drawable/perso_bttm"
-                android:text="Map"
-                tools:layout_editor_absoluteX="148dp"
-                tools:layout_editor_absoluteY="131dp" />
+        <View
 
-            <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/listDivider" />
 
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_gravity="bottom"
-                android:background="?android:attr/listDivider" />
+        <Button
+            android:id="@+id/mapbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/perso_bttm"
+            android:text="Map"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="131dp" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@drawable/perso_bttm"
-                android:text="Prevision" />
+        <View
 
-            <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/listDivider" />
 
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_gravity="bottom"
-                android:background="?android:attr/listDivider" />
+        <Button
+            android:id="@+id/gallerybtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/perso_bttm"
+            android:text="Gallery"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="131dp" />
 
-            <Button
-                android:id="@+id/logoutbtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@drawable/perso_bttm"
-                android:text="Log Out" />
+        <View
 
-            <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/listDivider" />
 
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_gravity="bottom"
-                android:background="?android:attr/listDivider" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/perso_bttm"
+            android:text="Mini Game" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@drawable/perso_bttm"
-                android:text="Mini Game" />
+        <View
 
-            <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/listDivider" />
 
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_gravity="bottom"
-                android:background="?android:attr/listDivider" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/perso_bttm"
+            android:text="Notify me" />
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@drawable/perso_bttm"
-                android:text="Notify me" />
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:background="?android:attr/listDivider" />
+
+        <Button
+            android:id="@+id/logoutbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/perso_bttm"
+            android:text="Log Out"
+            tools:layout_marginTop="100px" />
 
 
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

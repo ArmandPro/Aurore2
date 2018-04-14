@@ -62,6 +62,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final Button gallerybtn = findViewById(R.id.gallerybtn);
+        gallerybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(),GalleryActivity.class);
+                startActivity(intent);
+
+
+
+            }
+        });
+
         final Button mapbtn = findViewById(R.id.mapbtn);
         mapbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         notifBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Log.e("TAG", "onClick: notify");
                 //Daily notification
                 final Calendar calendar = Calendar.getInstance();
                 calendar.set(Calendar.HOUR_OF_DAY, 18);

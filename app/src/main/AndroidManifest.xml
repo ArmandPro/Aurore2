@@ -34,6 +34,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DisplayImagesActivity" />
         <activity android:name=".ForecastActivity" />
         <activity android:name=".WeatherActivity" />
         <activity
@@ -45,7 +47,7 @@
             android:label="@string/title_activity_roulette_game"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MiniGame.TapTaupeGame" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".GalleryActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
