@@ -38,8 +38,18 @@ public class MainActivity extends AppCompatActivity {
         forecast.upDateForecast();
 
 
-        //AD inter
+        //DAILY NOTIFICATION
+        //Daily nat 18:00
+        final Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, 18);
+        final Intent intent = new Intent(getApplicationContext(), NotificationReceiver.class);
+        final PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),0,intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis()+1000,AlarmManager.INTERVAL_DAY,pendingIntent);
+
+
+        //AD interstitial
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");//test ad ID
         //mInterstitialAd.setAdUnitId("ca-app-pub-8844459388456125/2506991189");
@@ -138,7 +148,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        final Button notifBttn = findViewById(R.id.button4);
+
+        /*final Button notifBttn = findViewById(R.id.button4);
         notifBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -154,9 +165,10 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
 
 
+        //button open random game
         final Button game = findViewById(R.id.button5);
         game.setOnClickListener(new View.OnClickListener() {
             @Override

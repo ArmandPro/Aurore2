@@ -13,6 +13,8 @@
         android:gravity="bottom|end"
         android:orientation="vertical">
 
+
+
         <TextView
             android:id="@+id/textView10"
             android:layout_width="match_parent"
@@ -23,9 +25,11 @@
             android:textColor="@android:color/white"
             android:textSize="30sp"
             android:textStyle="bold|italic"
+            android:layout_marginTop="20dp"
             tools:layout_editor_absoluteX="121dp"
             tools:layout_editor_absoluteY="0dp"
-            tools:paddingBottom="20px" />
+            tools:paddingBottom="20dp"
+            tools:paddingTop="20dp"/>
 
         <Button
             android:id="@+id/weatherbtn"
@@ -108,20 +112,9 @@
             android:layout_gravity="bottom"
             android:background="?android:attr/listDivider" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/perso_bttm"
-            android:text="Notify me" />
 
-        <View
 
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_gravity="bottom"
-            android:background="?android:attr/listDivider" />
+
 
         <Button
             android:id="@+id/logoutbtn"

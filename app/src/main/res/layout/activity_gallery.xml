@@ -4,15 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.etudes.aurore.GalleryActivity"
-    android:layout_margin="20dp">
+    android:background="@drawable/gradient2"
+    android:layout_margin="0dp">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="cursive"
         android:text="Share your photo"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
         android:id="@+id/textview"
-        android:textStyle="bold"
-        android:textSize="20dp"
         android:gravity="center"
         android:layout_marginTop="20dp"/>
 
@@ -36,9 +39,11 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ImageNameEditText"
+        android:textColor="@color/textColor"
         android:layout_below="@+id/ButtonChooseImage"
         android:layout_marginTop="20dp"
         android:hint="Enter Image Name Here"
+        android:textColorHint="@color/textColor"
         android:gravity="center"/>
 
     <Button
