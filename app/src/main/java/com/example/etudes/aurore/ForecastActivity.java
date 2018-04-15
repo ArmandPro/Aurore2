@@ -8,6 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -17,10 +22,17 @@ import java.util.Locale;
 
 public class ForecastActivity extends AppCompatActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
+
+
+
+
 
         /*ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.layout_forecast);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
@@ -82,6 +94,13 @@ public class ForecastActivity extends AppCompatActivity {
         update.setHours(18);
         update.setMinutes(05);
 
+        //day tomorrow
+        Date tom = new Date();
+        Calendar ctom = Calendar.getInstance();
+        ctom.setTime(tom);
+        ctom.add(Calendar.DATE, 1);
+        tom = ctom.getTime();
+
         //day after tomorrow
         Date dt = new Date();
         Calendar c = Calendar.getInstance();
@@ -102,52 +121,52 @@ public class ForecastActivity extends AppCompatActivity {
             tvday110.setText(formater.format(dtt));
         }else{
             tvday0.setText("Today");
-            tvday10.setText(formater.format(today));
+            tvday10.setText(formater.format(tom));
             tvday110.setText(formater.format(dt));
         }
-        tv0.setText(" " + ForecastValue.FORECAST[0][1]);
+        tv0.setText(" 3:00     " + ForecastValue.FORECAST[0][1]);
         if(ForecastValue.FORECAST[0][1]== kpmed) {
             tv0.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[0][1]>= kphi){
             tv0.setTextColor(colorRed); }
 
-        tv1.setText(" " + ForecastValue.FORECAST[0][2]);
+        tv1.setText(" 6:00     " + ForecastValue.FORECAST[0][2]);
         if(ForecastValue.FORECAST[0][2]== kpmed) {
             tv1.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[0][2]>= kphi){
             tv1.setTextColor(colorRed); }
 
-        tv2.setText(" " + ForecastValue.FORECAST[0][3]);
+        tv2.setText(" 9:00     " + ForecastValue.FORECAST[0][3]);
         if(ForecastValue.FORECAST[0][3]== kpmed) {
             tv2.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[0][3]>= kphi){
             tv2.setTextColor(colorRed); }
 
-        tv3.setText(" " + ForecastValue.FORECAST[0][4]);
+        tv3.setText(" 12:00   " + ForecastValue.FORECAST[0][4]);
         if(ForecastValue.FORECAST[0][4]== kpmed) {
             tv3.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[0][4]>= kphi){
             tv3.setTextColor(colorRed); }
 
-        tv4.setText(" " + ForecastValue.FORECAST[0][5]);
+        tv4.setText(" 15:00   " + ForecastValue.FORECAST[0][5]);
         if(ForecastValue.FORECAST[0][5]== kpmed) {
             tv4.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[0][5]>= kphi){
             tv4.setTextColor(colorRed); }
 
-        tv5.setText(" " + ForecastValue.FORECAST[0][6]);
+        tv5.setText(" 18:00   " + ForecastValue.FORECAST[0][6]);
         if(ForecastValue.FORECAST[0][6]== kpmed) {
             tv5.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[0][6]>= kphi){
             tv5.setTextColor(colorRed); }
 
-        tv6.setText(" " + ForecastValue.FORECAST[0][7]);
+        tv6.setText(" 21:00   " + ForecastValue.FORECAST[0][7]);
         if(ForecastValue.FORECAST[0][7]== kpmed) {
             tv6.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[0][7]>= kphi){
             tv6.setTextColor(colorRed); }
 
-        tv7.setText(" " + ForecastValue.FORECAST[1][0]);
+        tv7.setText(" 00:00   " + ForecastValue.FORECAST[1][0]);
         if(ForecastValue.FORECAST[1][0]== kpmed) {
             tv7.setTextColor(colorRedLight);
         }else if(ForecastValue.FORECAST[1][0]>= kphi){

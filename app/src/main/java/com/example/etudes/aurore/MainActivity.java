@@ -13,6 +13,9 @@ import android.widget.Toast;
 import com.example.etudes.aurore.MiniGame.MatrixGame;
 import com.example.etudes.aurore.MiniGame.RouletteGame;
 import com.example.etudes.aurore.MiniGame.TapTaupeGame;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
@@ -23,6 +26,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +38,44 @@ public class MainActivity extends AppCompatActivity {
         forecast.upDateForecast();
 
 
+        //AD inter
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");//test ad ID
+        //mInterstitialAd.setAdUnitId("ca-app-pub-8844459388456125/2506991189");
+        ///////////////////////////////////////////////////////////////////////// Following line for emulator only : on real device use the other one
+        mInterstitialAd.loadAd(new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build());
+        //mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+        mInterstitialAd.setAdListener(new AdListener(){
+            @Override
+            public void onAdClosed(){
+                Intent intentForecastActivity = new Intent(getApplicationContext(),ForecastActivity.class);
+                startActivity(intentForecastActivity);
+
+            }
+        });
 
 
 
+
+
+        //FORECAST
         final Button button = findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intentForecastActivity = new Intent(getApplicationContext(),ForecastActivity.class);
-                startActivity(intentForecastActivity);
+
+                if (mInterstitialAd.isLoaded()) {
+
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                    Intent intentForecastActivity = new Intent(getApplicationContext(),ForecastActivity.class);
+                    startActivity(intentForecastActivity);
+                }
+
 
 
             }
